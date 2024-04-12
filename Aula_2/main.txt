@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+/*
+** Para colocar imagens:
+** Descomentar linha 62 do pubspec.yaml;
+** Adicionar a linha com o seu diretório de imagens
+** Respeitar a indentação
+*/
+
+void main() {
+  runApp(MaterialApp(
+    title: "Aula 2", // NOME DO APLICATIVO
+
+    home: Container(
+      decoration: BoxDecoration(color: Colors.yellow[100]),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            "Texto",
+            style: TextStyle(
+              backgroundColor: Colors.orange,
+              color: Colors.black,
+              fontSize: 50,
+              fontStyle: FontStyle.normal,
+              decoration: TextDecoration.none,
+            ),
+          ),
+
+          TextButton(
+            child: Container(
+              child: Text(
+                "Botão de Texto",
+                style: TextStyle(fontSize: 20, color: Colors.red),
+              ),
+              decoration: BoxDecoration(border: Border.all(color: Colors.redAccent)),
+            ),
+            onPressed: (){},
+          ),
+
+          ElevatedButton(
+            child: Container(
+              child: Text("Botão Elevado",
+                style: TextStyle(fontSize: 20, color: Colors.deepPurpleAccent),
+              ),
+            ),
+            onPressed: (){},
+          ),
+
+          IconButton(
+            icon: Icon(Icons.star, color: Colors.blue),
+            iconSize: 50,
+            onPressed: (){},
+          ),
+
+          Container(
+            child: Image.asset("assets/imagens/camera.png"),
+            height: 150,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.green, width: 3),
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+  );
+}
