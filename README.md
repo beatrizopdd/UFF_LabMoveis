@@ -51,3 +51,13 @@ Obs.: É importante saber que o Dart SDK está dentro do pacote flutter. Procure
 - :iphone: Frase do Dia;
 - :iphone: Jokenpo;
 
+## :pencil: Aula 4
+
+- Entrada de Dados;
+- :hammer: APP 1 - Jogo da Velha;
+
+## :pencil: Aula 5
+- Navegação;
+- :iphone: ATM Consultoria;
+- :iphone: Cara e Coroa;
+

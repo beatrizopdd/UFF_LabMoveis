@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class Jokenpo extends StatefulWidget {
+  const Jokenpo({super.key});
+
   @override
-  Aparencia createState() => Aparencia();
+  State<Jokenpo> createState() => Aparencia();
 }
 
 class Aparencia extends State<Jokenpo> {
@@ -14,9 +16,30 @@ class Aparencia extends State<Jokenpo> {
     Image.asset("assets/imagens/tesoura.png"),
     Image.asset("assets/imagens/padrao.png"),
   ];
+  List<String> textos = [
+    "ESCOLHA SEU MOVIMENTO",
+    "VOCÊ VENCEU!",
+    "ROBÔ VENCEU!",
+    "EMPATE!",
+  ];
 
   int escolhaRobo = 3;
   int escolhaUsuario = 3;
+  int escolhaTexto = 0;
+
+  void resultado() {
+    setState((){
+      escolhaRobo = Random().nextInt(imagens.length - 1);
+
+      if ((escolhaUsuario == 0 && escolhaRobo == 2) || (escolhaUsuario == 1 && escolhaRobo == 0) || (escolhaUsuario == 2 && escolhaRobo == 1))
+        escolhaTexto = 1;
+      else if ((escolhaUsuario == 0 && escolhaRobo == 1) || (escolhaUsuario == 1 && escolhaRobo == 2) || (escolhaUsuario == 2 && escolhaRobo == 0))
+        escolhaTexto = 2;
+      else if (escolhaUsuario == escolhaRobo)
+        escolhaTexto = 3;
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +78,7 @@ class Aparencia extends State<Jokenpo> {
 
             const SizedBox(height: 50),
 
-            const Text("ESCOLHA SEU MOVIMENTO",
+            Text(textos.elementAt(escolhaTexto),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
@@ -66,9 +89,9 @@ class Aparencia extends State<Jokenpo> {
               children: [
                 ElevatedButton(
                   onPressed: (){
-                    setState((){
+                    setState(() {
                       escolhaUsuario = 0;
-                      escolhaRobo = Random().nextInt(imagens.length - 1);
+                      resultado();
                     });
                   },
                   style: const ButtonStyle(shape: MaterialStatePropertyAll(CircleBorder())),
@@ -79,9 +102,9 @@ class Aparencia extends State<Jokenpo> {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    setState((){
+                    setState(() {
                       escolhaUsuario = 1;
-                      escolhaRobo = Random().nextInt(imagens.length - 1);
+                      resultado();
                     });
                   },
                   style: const ButtonStyle(shape: MaterialStatePropertyAll(CircleBorder())),
@@ -92,9 +115,9 @@ class Aparencia extends State<Jokenpo> {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    setState((){
+                    setState(() {
                       escolhaUsuario = 2;
-                      escolhaRobo = Random().nextInt(imagens.length - 1);
+                      resultado();
                     });
                   },
                   style: const ButtonStyle(shape: MaterialStatePropertyAll(CircleBorder())),

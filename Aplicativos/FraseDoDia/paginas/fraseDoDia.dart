@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class FraseDoDia extends StatefulWidget {
+  const FraseDoDia({super.key});
+
   @override
-  Aparencia createState() => Aparencia();
+  State<FraseDoDia> createState() => Aparencia();
 }
 
 class Aparencia extends State<FraseDoDia> {
