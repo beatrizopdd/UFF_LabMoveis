@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
-import 'paginas/menu.dart';
-import 'paginas/tabuleiro3.dart';
-import 'paginas/tabuleiro4.dart';
+import 'paginas/home.dart';
+import 'paginas/resultado.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      title: "Jogo da Velha",
+      title: "Alerta Dengue",
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue.shade900,
-          primary: Colors.blue.shade900,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red, primary: Colors.red),
         useMaterial3: true,
       ),
-
-      home: const Menu(),
-      initialRoute: "/",
+      home: const Home(),
       routes: {
-        Tabuleiro3.nomeDaRota: (context) => Tabuleiro3(),
-        Tabuleiro4.nomeDaRota: (context) => Tabuleiro4(),
+        Resultado.nomeDaRota: (context) => const Resultado()
       },
     )
   );

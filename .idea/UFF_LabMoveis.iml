@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/projeto_flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/projeto_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/projeto_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Aplicativos/JogoDaVelha/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Aplicativos/JogoDaVelha/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Aplicativos/JogoDaVelha/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

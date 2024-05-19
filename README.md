@@ -18,6 +18,18 @@
 
 Obs.: A pasta projeto_flutter é onde eu testarei os aplicativos.
 
+## :building_construction: Depuração sem fio
+
+- Conecte o computador e o celular na mesma rede Wi-fi;
+- Ative as opções de desenvolvedor do seu celular;
+- Abra o terminal na pasta "platform-tools" do android sdk;
+- Digite o comando "adb" para ver se está tudo certo na pasta;
+- No celular, vá até "depuração sem fio" e a ative;
+- Clique em "Parear o dispositivo com um código de pareamento";
+- No terminal, digite o comando "adb pair iii.iii.i.iii:ppppp";
+    - Sendo "iii.iii.i.iii" o endereço IP e "ppppp" o número da porta informados no celular;
+- Quando terminal pedir "Enter pairing code:", digite o código de seis dígitos informados pelo celular;
+
 ## :bookmark_tabs: Aula 0
 
 - Instalação do Android Studio para obter o Android SDK (pode desinstalar depois caso utilize outra IDE);
@@ -60,4 +72,11 @@ Obs.: É importante saber que o Dart SDK está dentro do pacote flutter. Procure
 - Navegação;
 - :iphone: ATM Consultoria;
 - :iphone: Cara e Coroa;
+
+## :pencil: Aula 6
+- Web Services;
+
+## :pencil: Aula 7
+- Web Services;
+- :hammer: Alerta Dengue;
 
