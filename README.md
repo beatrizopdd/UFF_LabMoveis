@@ -80,3 +80,8 @@ Obs.: É importante saber que o Dart SDK está dentro do pacote flutter. Procure
 - Web Services;
 - :hammer: Alerta Dengue;
 
+## :pencil: Aula 8
+- Manipulação de Dados;
+
+## :pencil: Aula 9 
+- Banco de Dados;
